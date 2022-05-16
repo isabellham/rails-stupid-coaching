@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="border-start border-4 ps-3">
+    <p><%= @answer %></p>
+    <p><em>- You</em></p>
+  </div>
+
+  <div class="border-start border-4 ps-3 bg-warning bg-opacity-10">
+    <p><strong>
+    <% if @answer.downcase == "i am going to work" then %>
+    <%= "Great!" %>
+    <% elsif @answer.include?("?") then %>
+    <%= "Silly question, get dressed and go to work!" %>
+    <% else %>
+    <%= "I don't care, get dressed and go to work!" %>
+    <% end %>
+    </strong></p>
+    <p><em>- Coach</em></p>
+  </div>
+  <%= link_to "Go back to ask", "/ask" %>
+</div>
+<%# <a href="/ask">Go back to ask</a> %>
