@@ -6,13 +6,7 @@
 
   <div class="border-start border-4 ps-3 bg-warning bg-opacity-10">
     <p><strong>
-    <% if @answer.downcase == "i am going to work" then %>
-    <%= "Great!" %>
-    <% elsif @answer.include?("?") then %>
-    <%= "Silly question, get dressed and go to work!" %>
-    <% else %>
-    <%= "I don't care, get dressed and go to work!" %>
-    <% end %>
+      <%= @result %>
     </strong></p>
     <p><em>- Coach</em></p>
   </div>
